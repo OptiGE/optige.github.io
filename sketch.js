@@ -3,10 +3,10 @@
 // ---------------- S N A K E   C L A S S ----------------------
 
 class Snake{
-  constructor(scale, angle, steps, xpos, ypos){
+  constructor(scale, angle, steps, xpos, ypos, offsetX, offsetY){
     //Current position of snake
-    this.x = xpos;
-    this.y = ypos;
+    this.x = xpos + offsetX;
+    this.y = ypos + offsetY;
     
     //The length of one step
     this.baseVector = new Vector(1, 1);
@@ -121,34 +121,21 @@ var stepValue = 11;
 var sizeSlider;
 var sizeValue = 9;
 
+var offsetX = 0;
+var offsetY = 0;
+
 var resetButton;
 var allValues;
 
 function setup() {
   
-  createCanvas($(window).width(), 0.8 * $(window).height());
+  var myCanvas = createCanvas($(window).width(), 0.8 * $(window).height());
+  myCanvas.parent("sketchContainer");
+
   
-  resetSketch();
   
-  createP('Controls');
-  resetButton = createButton("Draw!");
-  resetButton.mousePressed(resetSketch);
-  resetButton.style('width', '10vw');
+  resetSketch();  
   
-  angleSlider = createSlider(0, 360, 100);
-  angleSlider.style('width', '20vw');
-  
-  stepSlider = createSlider(1, 100, 11);
-  stepSlider.style('width', '20vw');
-  
-  sizeSlider = createSlider(1, 200, 9);
-  sizeSlider.style('width', '20vw');
-  
-  allValues = createP('Values: ');
-  
-  saveButton = createButton("Save!");
-  saveButton.mousePressed(saveSketch);
-  saveButton.style('width', '10vw');
 }
 
 
@@ -160,11 +147,11 @@ function draw() {
   myColor.rainbowStep();
   
   //Drawing control values to screen
-  angleValue = angleSlider.value();
-  stepValue = stepSlider.value();
-  sizeValue = sizeSlider.value();
-  allValues.html("Values -> Angle: " + angleValue + " Steps: " + stepValue + " Size: " + sizeValue);
-  
+  angleValue = parseInt(select("#angleSlider").value());
+  stepValue = parseInt(select("#stepSlider").value());
+  sizeValue = parseInt(select("#sizeSlider").value());
+  offsetX = parseInt(select("#offsetX").value());
+  offsetY = parseInt(select("#offsetY").value());
   
   
   //Actual drawing
@@ -179,7 +166,7 @@ function draw() {
 
 
 function resetSketch(){
-	ninePattern = new Snake(sizeValue, angleValue, stepValue, 0.5 * $(window).width(), 600);
+	ninePattern = new Snake(sizeValue, angleValue, stepValue, 0.5 * $(window).width(), 600, offsetX, offsetY);
 	background(0);
 	oldX = ninePattern.x;
 	oldY = ninePattern.y;

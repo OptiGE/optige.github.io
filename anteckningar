@@ -1,0 +1,48 @@
+För 90-gradiga former:
+
+Mönster nummer:
+
+4n + 1 = 4 loopar
+4n + 2 = 2 loopar
+4n + 3 = 4 loopar
+4n     = inf loopar
+
+n = 0...inf
+
+Vilket mönster ger 4, 2, 4, inf, 4, 2, 4, inf?
+
+   360
+---------- = nästan rätt svar
+(x%4)*90
+
+
+
+
+
+Avstånd från första uppåtriktade starten till mönstrets mittpunkt
+
+       Uppåt      Innåt
+1      0.5        0.5
+2      0.5        1
+3      0          3     
+4      -          -
+5      2.5        0.5
+6      1.5        2
+7      3          0
+8      -          -
+9      4.5        0.5
+10     3.5        3
+11     0          6
+12     -          -
+13     6.5        0.5
+14     ?          4
+15     ?          ?
+16     -          -
+
+Formel för att räkna ut avstånd från startpunkt till mönstrets mitt: ?????????????
+
+
+Extrempunkter för mönster n:
+
+Verkara vara antingen efter n-2 eller n-3 steg
+

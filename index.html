@@ -4,19 +4,17 @@
 
 
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
 	<!-- P5 JS -->
     <script src="p5.min.js"></script>
     <script src="p5.dom.min.js"></script>
     <script src="p5.sound.min.js"></script>
-	
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
-
-	
-	<!-- -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
 	
 	
 
@@ -26,12 +24,114 @@
 	body{
 		background-color: #AAAAAA;
 	}
+	
+	.row{
+		margin-top: 10px;
+	}
 </style>
 
 <body>
+    
 	
-    <script src="sketch.js"></script>
+	<script src="sketch.js"></script>
 	
+			
+	<div id="sketchContainer"></div>
+	
+	
+	<!-- Control panel -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			
+			<div class="col-md-2">
+				<button type="button" class="btn btn-primary" onclick="resetSketch();">DRAW</button>
+			</div>
+			
+			<div class="col-md-1">
+				<b>Angle:</b>
+			</div>
+			
+			<div class="col-md-1">
+				  <input type="number" class="form-control" id="angleSlider" value="100">
+			</div>
+			
+			<div class="col-md-4"></div>
+		</div>
+	
+		<div class="row">
+			<div class="col-md-4"></div>
+			
+			<div class="col-md-2">
+				<button type="button" class="btn btn-success" onclick="saveSketch();">SAVE</button>
+			</div>
+			
+			<div class="col-md-1">
+				<b>Steps:</b>
+			</div>
+			
+			<div class="col-md-1">
+				<input type="number" class="form-control" id="stepSlider" value="11">
+			</div>
+			
+			<div class="col-md-4"></div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-4"></div>
+			
+			<div class="col-md-2">
+
+			</div>
+			
+			<div class="col-md-1">
+				<b>Size:</b>
+			</div>
+			
+			<div class="col-md-1">
+
+				<input type="number" class="form-control" id="sizeSlider" value="9">
+			</div>
+			
+			<div class="col-md-4"></div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-4"></div>
+			
+			<div class="col-md-1">
+				<b>Offset X:</b>
+			</div>
+			
+			<div class="col-md-1">
+
+				<input type="number" class="form-control" id="offsetX" value="0">
+			</div>
+			
+			<div class="col-md-1">
+				<b>Offset Y:</b>
+			</div>
+			
+			<div class="col-md-1">
+
+				<input type="number" class="form-control" id="offsetY" value="0">
+			</div>
+			
+			<div class="col-md-4"></div>
+		</div>
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </body>
 
 </html>
