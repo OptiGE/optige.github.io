@@ -122,7 +122,7 @@ var sizeSlider;
 var sizeValue = 9;
 
 var offsetX = 0;
-var offsetY = -250;
+var offsetY = 0;
 
 var resetButton;
 var allValues;

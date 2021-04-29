@@ -10,6 +10,8 @@ My 3rd grade teacher once showed me a neat way to make nice, oddly unsymmetrical
 
 I enjoyed this a lot and wanted to do it for lengths other than 9 and angles other than 90, from which this program was born. Once you open it it's rather self-explanatory. Most of the interesting code can be found in sketch.js
 
+A video explanation:
+https://www.youtube.com/watch?v=LWn9jEMkCGw&t=373s
 
 ![Chart from data collected by the program](https://github.com/OptiGE/tsalikis/blob/master/G3/225-10.jpg)
 
