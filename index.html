@@ -13,62 +13,29 @@
       background-color: #f1f1f1;
       height: 100%;
     }
-        
-    /* On small screens, set height to 'auto' for the grid */
-    @media screen and (max-width: 767px) {
-      .row.content {height: auto;} 
-    }
-
-    .well.animatedprimary {
-      animation: runprimary 1s ease;
-    }
-
-    .well.animatedsecondary {
-      animation: runsecondary 1s ease;
-    }
-
-    @keyframes runprimary {
-      0%   {background-color: #f5f5f5;}
-      50%  {background-color: #f5f5f5;}
-      100% {background-color: #f5f5f5;}
-    }
-
-    @keyframes runsecondary {
-      0%   {background-color: #f5f5f5;}
-      50%  {background-color: #d0ffcc;}
-      100% {background-color: #f5f5f5;}
-    }
 
   </style>
 </head>
 <body>
-
-<!-- 
-      Här är number inputs om det skulle behövas någon gång
-      <input type="number" required name="price" min="0" value="0" step="any">
-      <input type="number" id="quantity" name="quantity" min="1" max="5">
--->
 
 <div class="container-fluid">
   <div class="row content">
 
     <!-- TOP ROW -->
       <div class="row">
+
         <div class="col-sm-3">
-          <div class="well">
             <button onclick="location.href='http://optige.github.io/tsalikis/tsalikis.html'" type="button"> Tsalikis </button>
-          </div>
         </div>
+
         <div class="col-sm-3">
-          <div class="well">
             <button onclick="location.href='http://optige.github.io/salarygoggles/goggles.html'" type="button"> SalaryGoggles </button>
-          </div>
         </div>
+
         <div class="col-sm-3">
-          <div class="well">
             <button onclick="location.href='http://optige.github.io/hafvklocka/delta.html'" type="button"> Häfvklocka </button>
-          </div>
         </div>
+
       </div>
     </div>
   </div>

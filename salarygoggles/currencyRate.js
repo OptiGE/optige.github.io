@@ -15,13 +15,17 @@ class currencyRate {
       const json = await response.json() */
 
     const request = new XMLHttpRequest()
-    request.open('GET', `https://api.exchangeratesapi.io/latest?base=${fromCurrency}&symbols=${toCurrency}`, false)
+    request.open('GET', `http://api.exchangeratesapi.io/v1/convert?access_key=f39af0e5c46ee51ef37a8eda09e492a0&from=${fromCurrency}&to=${toCurrency}&amount=1`, false)
+    request.open('GET', `https://v2.api.forex/rates/latest.json?beautify=true&from=${fromCurrency}&to=${toCurrency}&key=351e7d5f-8fd5-400a-8374-ef7bee21da95`, false)
     request.send(null)
+
+    console.log(JSON.parse(request.responseText))
 
     if (request.status === 200) {
       const json = JSON.parse(request.responseText)
+      console.log(json)
       try {
-        const rate = parseFloat(json.rates[this.currName2])
+        const rate = parseFloat(json.rates[this.currName2]) //Lol så helt utan flit visar det sig att json.rates faktiskt är ett bibliotek för att göra just detta
         return rate
       } catch (err) {
         console.log(err)
