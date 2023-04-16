@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--https://www.convertcsv.com/json-to-csv.htm-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="strecklista.css">
+    <title>Bondhelgsstrecklista</title>
+</head>
+
+<body>
+    <button id="clearCache">Clear Cache</button>
+    <div class="container">
+        <h1>Bondhelgsstrecklista</h1>
+        <div id="uploadCSV">
+            <label for="csvFile">Upload CSV:</label>
+            <input type="file" id="csvFile" accept=".csv">
+        </div>
+        <hr>
+        <h2>Priser</h2>
+        <div id="priceInputs">
+            Öl
+            <input value="10" type="number" id="beerPrice" placeholder="Ölpris" min="0" step="1" required>
+            Cider
+            <input value="15" type="number" id="ciderPrice" placeholder="Ciderpris" min="0" step="1" required>
+            Korv
+            <input value="15" type="number" id="sausagePrice" placeholder="Korvpris" min="0" step="1" required>
+            Shot
+            <input value="40" type="number" id="shotPrice" placeholder="Shotpris" min="0" step="1" required>
+            Drink
+            <input value="40" type="number" id="drinkPrice" placeholder="Drinkpris" min="0" step="1" required>
+            <hr>
+        </div>
+        <br>
+        <h2>Köp</h2>
+        <form id="purchaseForm">
+            <input type="text" id="name" placeholder="ID" style="background-color: rgb(179, 255, 185);" required>
+            <input type="number" id="beer" placeholder="Öl" min="0">
+            <input type="number" id="cider" placeholder="Cider" min="0">
+            <input type="number" id="sausage" placeholder="Korv" min="0">
+            <input type="number" id="shot" placeholder="Shot" min="0">
+            <input type="number" id="drink" placeholder="Drink" min="0">
+
+            <div style="border-style: solid; border-width: 1px; border-color: rgb(134, 134, 134); border-radius: 5px;">
+            <input type="number" id="other" placeholder="Annat" min="0">
+            <input type="text" id="otherDesc" placeholder="Beskr.">
+            <input type="number" id="otherPrice" placeholder="Pris" min="0" step="0.01">
+            </div>
+            <button type="submit">Add Purchase</button>
+            <button type="button" id="saveJSON">Save JSON</button>
+        </form>
+        <table id="purchases">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>Öl</th>
+                    <th>Cider</th>
+                    <th>Korv</th>
+                    <th>Shot</th>
+                    <th>Drink</th>
+                    <th>Annat</th>
+                    <th>Total</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="strecklista.js"></script>
+</body>
+
+</html>

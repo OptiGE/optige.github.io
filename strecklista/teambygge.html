@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Registration</title>
+  <link rel="stylesheet" href="teambygge.css">
+</head>
+<body>
+    <!-- Add the container div inside the body tag -->
+<body>
+    <div class="container">
+        <h1>Team Registration</h1>
+        <button onclick="saveToFile()">Save Teams to File</button>
+        <label for="loadFile">Load Teams from File:</label>
+        <input type="file" id="loadFile" onchange="loadFromFile()">
+
+        <hr>
+        <label for="teamName">Team Name:</label>
+        <input type="text" id="teamName">
+        <button onclick="createTeam()">Create Team</button>
+        <div id="teams"></div>
+
+        <script src="teambygge.js"></script>
+        </div>
+        <script src="scripts.js"></script>
+  </body>
+</html>

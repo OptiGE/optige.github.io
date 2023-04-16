@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  h1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  input,
+  select,
+  button {
+    margin-bottom: 10px;
+  }
+  
+  .team {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  .team h3 {
+    margin-top: 0;
+  }
+  
+  .team input,
+  .team select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .team button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .team button:hover {
+    background-color: #45a049;
+  }
+  
+  .edit-member {
+    cursor: pointer;
+    color: #4CAF50;
+    margin-left: 5px;
+  }
+  
+  .edit-member:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add media queries for mobile responsiveness */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px;
+      padding: 10px;
+    }
+  
+    input,
+    select,
+    button {
+      font-size: 14px;
+    }
+  
+    .team {
+      font-size: 14px;
+    }
+  }
+  
