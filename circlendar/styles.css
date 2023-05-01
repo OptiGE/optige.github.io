@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+  .container {
+    position: relative;
+  }
+  .circle {
+    position: relative;
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  .watch-needle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 50%; /* Increased height from 40% to 50% */
+    background-color: #FF0000;
+    transform-origin: center bottom;
+    transform: translate(-50%, -100%) rotate(calc((365deg / 365) * var(--day-of-year)));
+  }
+  .month-divider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 50%; /* Increased height from 20% to 50% */
+    background-color: #000;
+    transform-origin: center bottom;
+  }  
+    .month-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transform-origin: center;
+    }
+    .week-divider {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 25%;
+        background-color: rgba(211, 211, 211, 0.5); /* Light grey color */
+        transform-origin: center bottom;
+    }
+    .week-divider {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 50%; /* Updated height from 25% to 50% */
+        background-color: rgba(211, 211, 211, 0.5); /* Light grey color */
+        transform-origin: center bottom;
+      }
+      
