@@ -76,7 +76,7 @@ function addPurchase() {
     chipCell.textContent = chips;
     drinkCell.textContent = drink;
     otherCell.textContent = other ? `${other} (${otherDesc}, ${otherPrice} kr)`: other;
-    totalCell.textContent = `${total}kr`;
+    totalCell.textContent = `${total} kr`;
 
     deleteCell.innerHTML = '<button class="deleteBtn">Delete</button>';
 
@@ -234,7 +234,7 @@ function updatePrices() {
 
         const rowIndex = purchaseLog.indexOf(purchase);
         const tableRow = document.getElementById("purchases").rows[rowIndex + 1];
-        tableRow.cells[8].textContent = `${purchase.total} kr`;
+        tableRow.cells[9].textContent = `${purchase.total} kr`;
     }
 
     savePurchaseLogToLocalStorage();
@@ -295,7 +295,7 @@ function addToTable(purchase) {
     row.insertCell().textContent = purchase.chips;
     row.insertCell().textContent = purchase.drink;
     row.insertCell().textContent = purchase.other.quantity ? `${purchase.other.quantity} (${purchase.other.description}, ${purchase.other.price} kr)`: "0";
-    row.insertCell().textContent = `${purchase.total}kr`;
+    row.insertCell().textContent = `${purchase.total} kr`;
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
