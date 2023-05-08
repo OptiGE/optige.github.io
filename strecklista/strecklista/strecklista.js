@@ -103,6 +103,8 @@ function addPurchase() {
 
     purchaseLog.unshift(purchase); // Bör vara unshift?
 
+    console.log(purchaseLog)
+
     // Clear the form inputs
     document.getElementById("name").value = "";
     document.getElementById("beer").value = "";
@@ -159,7 +161,7 @@ function updateRowIndexes() {
 }
 
 function saveAsJSON() {
-    const json = JSON.stringify(purchaseLog.dateTime);
+    const json = JSON.stringify(purchaseLog);
     const fileName = `${getRandomAnimalName()} - ${purchaseLog[purchaseLog.length - 1].dateTime} -> ${purchaseLog[0].dateTime}`;
     const file = new Blob([json], { type: "application/json" });
     const a = document.createElement("a");
@@ -280,6 +282,7 @@ document.getElementById("csvFile").addEventListener("change", handleCSVUpload);
 
 function savePurchaseLogToLocalStorage() {
     localStorage.setItem("purchaseLog", JSON.stringify(purchaseLog));
+    console.log(localStorage.getItem("purchaseLog"))
 }
 
 function addToTable(purchase) {
