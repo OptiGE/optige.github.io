@@ -1,3 +1,36 @@
-<div class="commentbox"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .commentbox {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .commentbox {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="commentbox"></div>
+</div>
+
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>commentBox('5716796984262656-proj')</script>
+
+</body>
+</html>
